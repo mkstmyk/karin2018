@@ -1,0 +1,9 @@
+newmtl material
+Ka 1.000 1.000 1.000
+Kd 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+Ns 50.000
+Tr 0.000
+illum 1
+map_Ka model-00500.png
+map_Kd model-00500.png
