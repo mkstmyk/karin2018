@@ -4,6 +4,14 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
       <title>Happy New Year</title>
         
+
+  <!-- Bootstrap Bootswatch theme CSS - other themes available here: https://bootswatch.com -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/thomaspark/bootswatch/gh-pages/slate/bootstrap.min.css" />
+  
+  <!-- Bootstrap JS Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
       <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
       <!-- <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>     -->
       <script src="js/aframe-ar.js"></script>
@@ -11,6 +19,14 @@
     </head>
     <body>
             
+<a-scene preloader>
+    <a-assets>
+        <a-asset-item id="model" src="model.obj" preload="true"></a-asset-item>
+        <img id="texture1" src="texture1.jpg" crossorigin="anonymous" preload="true">
+        <img id="texture2" src="texture2.jpg" crossorigin="anonymous" preload="true">
+      </a-assets>
+  </a-scene>
+
       <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;" vr-mode-ui="enabled: false">
         <a-assets>
              <a-asset-item id="dog315" src="models/model-00315.obj"></a-asset-item>
