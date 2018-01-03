@@ -178,8 +178,8 @@
       </a-scene>
 
       <script type="text/javascript">
-	/*
-	document.querySelector('.a-enter-vr-button').style.visible = 'none';
+	
+	//document.querySelector('.a-enter-vr-button').style.visible = 'none';
 	// iOSのバージョン判断
 	function ios_ver (){
 	var ios_ua = navigator.userAgent;
@@ -192,7 +192,6 @@
 	if(ios_ver() < 110) { 
 		       alert("iOS 11以上へのアップデートが必要です。");
 		       } 
-		       
 		       var ua = navigator.userAgent.toLowerCase();
 		       // iPhone
 		       var isiPhone = (ua.indexOf('iphone') > -1);
@@ -212,7 +211,7 @@
 	  window.onresize = directionCheck;
 	  }
 	  directionCheck();
- 
+	  
 	  function directionCheck() {
 	  var direction = Math.abs(window.orientation);
 	  if(direction == 90) {
