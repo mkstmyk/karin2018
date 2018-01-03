@@ -37,18 +37,18 @@
             <div class="preloader-modal__spinner sk-spinner sk-rotating-plane" aria-hidden="true"></div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" align="center">
           <div class="col-xs-12">
             <span class="progress-label">Loading 0%</span>
           </div>
-	  カメラをQRコードに向けるとカリントウが現れます。
+	  スマホを横向きにして、カメラをQRコードに向けるとカリントウが現れます。
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div id="direction"></div>
+<div id="direction"　align="center"></div>
       <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;" vr-mode-ui="enabled: false">
         <a-assets>
              <a-asset-item id="dog315" src="models/model-00315.obj"></a-asset-item>
@@ -211,7 +211,7 @@ function directionCheck() {
     if(direction == 90) {
         //document.getElementById('direction').innerHTML = '横向き';
     } else {
-        document.getElementById('direction').innerHTML = 'スマートフォンの向きを横向きにしてください';
+        document.getElementById('direction').innerHTML = 'スマホを横向きにして、カメラをQRコードに向けるとカリントウが現れます。';
     }
 }
 
