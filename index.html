@@ -47,6 +47,7 @@
   </div>
 </div>
 
+<div id="direction"></div>
       <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;" vr-mode-ui="enabled: false">
         <a-assets>
              <a-asset-item id="dog315" src="models/model-00315.obj"></a-asset-item>
@@ -183,6 +184,36 @@ function ios_ver (){
 if(ios_ver() < 110) { 
 	       alert("iOS 11以上へのアップデートが必要です。");
 } 
+
+var ua = navigator.userAgent.toLowerCase();
+// iPhone
+var isiPhone = (ua.indexOf('iphone') > -1);
+// iPad
+var isiPad = (ua.indexOf('ipad') > -1);
+// Android
+var isAndroid = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') > -1);
+// Android Tablet
+var isAndroidTablet = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') == -1);
+ 
+// iOS
+if(isiPhone || isiPad) {
+    window.onorientationchange = directionCheck;
+}
+// Android
+if(isAndroid || isAndroidTablet) {
+    window.onresize = directionCheck;
+}
+directionCheck();
+ 
+function directionCheck() {
+    var direction = Math.abs(window.orientation);
+    if(direction == 90) {
+        document.getElementById('direction').innerHTML = '横向き';
+    } else {
+        document.getElementById('direction').innerHTML = '縦向き';
+    }
+}
+
       let els = document.querySelectorAll('a-obj-model');
       let current = 0, total = els.length;
       let hideAll = ()=> {
